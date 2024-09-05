@@ -20,7 +20,8 @@
     >
       <!-- home section start -->
       <section
-        class="home text-white min-h-screen flex justify-center items-center"
+        id="home-screen"
+        class="text-white min-h-screen flex justify-center items-center"
       >
         <div class="space-y-2 flex flex-col items-center">
           <h1 class="text-8xl font-anthon">ALPHABET CLASH</h1>
@@ -32,7 +33,7 @@
       </section>
 
       <!-- playground section start -->
-      <section class="space-y-12 font-poppins hidden">
+      <section id="playground-screen" class="space-y-12 font-poppins hidden">
         <!-- screen -->
         <div class="screen-container flex justify-center pt-12">
           <div
@@ -43,7 +44,10 @@
                 Don't watch keyboard while playing...
               </p>
             </div>
-            <p class="text-9xl font-semibold flex justify-center items-center">
+            <p
+              id="display-latter"
+              class="text-9xl font-semibold flex justify-center items-center uppercase"
+            >
               Y
             </p>
           </div>
@@ -86,29 +90,33 @@
           </div>
         </div>
         <div class="w-[1024px] mx-auto flex justify-between">
-          <button class="btn bg-[#894189] rounded-full border-none">
+          <button class="btn bg-[#894189] rounded-full border-none text-white">
             Life
             <img src="icons/Vector.svg" alt="vector" />
-            <span>1</span>
+            <span id="current-life">5</span>
           </button>
-          <button class="btn bg-[#360490] rounded-full border-none border-none">
-            id="o" Score
+          <button
+            class="btn bg-[#360490] rounded-full border-none border-none text-white"
+          >
+            Score
             <img src="icons/monetization_on.svg" alt="vector" />
-            <span>1</span>
+            <span id="current-score">0</span>
           </button>
         </div>
       </section>
-      <!-- score section start -->
+      <!-- Final score section start -->
       <section
+        id="final-score-screen"
         class="display-score flex justify-center min-h-screen items-center hidden"
       >
         <div
           class="text-white space-y-3 text-center px-6 py-4 bg-[#FFFFFF33] rounded-2xl"
         >
+          <p>Game over!</p>
           <h1 class="text-6xl font-semibold">
-            <span>Score</span><span>14</span>
+            <span>Score:</span><span id="show-final-score">0</span>
           </h1>
-          <button class="btn bg-white">Play Now</button>
+          <button class="btn bg-white" onclick="playAgain()">Play Now</button>
           <p>Practice will make you Pro</p>
         </div>
       </section>
